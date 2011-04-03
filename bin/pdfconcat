@@ -1,15 +1,22 @@
 #!/usr/bin/env ruby
 require 'pdftools'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: pdfconcat OPTIONS files"
+  opts.on "-o [file]", "--output [file]", "Specify the output file name" do |out|
+    options[:output_file] = out
+  end
+end.parse!
 
 files = ARGV
 
 puts "PDFTOOLS #{PDFTOOLS_VERSION}"
 puts "2011 Brian P. Hogan"
-puts "#{JAR_ROOT}"
+#puts "#{JAR_ROOT}"
+puts "------------------------------------------"
+puts "Concatonating #{files.join(", ")}"
+PDFTools::Tools.merge(:outfile => options[:output_file], :files => files)
 
-if files == []
-  puts "No files specified"
-else
-  PDFTools::Tools.merge(files)
-end
 

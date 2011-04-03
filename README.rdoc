@@ -10,11 +10,19 @@ gem install pdftools
 ==Usage
 
 === Merging files
-Sometimes you want to slam a few pdf files together. Do it this way:
+Sometimes you want to slam a few pdf files together. This
+merge method preserves all internal bookmarks, notes, and
+other references.
+
+Do it this way:
 
     pdfconcat first.pdf second.pdf third.pdf
 
 The output will be found as first-m.pdf
+
+You can specify the output with the -o flag
+
+   pdfconcat -o big.pdf first.pdf second.pdf
 
 =Licence
 == Multivalent Licence
