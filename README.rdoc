@@ -1,0 +1,25 @@
+=PDFTOOLS
+
+Simple gem for working with PDFs from the command line.
+It uses the Java Multivalent library, thus you need a working JRE on
+your computer or server.
+
+==Install
+gem install pdftools
+
+==Usage
+
+=== Merging files
+Sometimes you want to slam a few pdf files together. Do it this way:
+
+    pdfconcat first.pdf second.pdf third.pdf
+
+The output will be found as first-m.pdf
+
+Licence
+== Multivalent Licence
+http://multivalent.sourceforge.net/license.html
+
+== The rest
+MIT.
+

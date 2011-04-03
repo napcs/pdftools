@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'pdftools'
+
+files = ARGV
+
+puts "PDFTOOLS #{PDFTOOLS_VERSION}"
+puts "2011 Brian P. Hogan"
+puts "#{JAR_ROOT}"
+
+if files == []
+  puts "No files specified"
+else
+  PDFTools::Tools.merge(files)
+end
+
