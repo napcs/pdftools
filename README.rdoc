@@ -16,7 +16,7 @@ Sometimes you want to slam a few pdf files together. Do it this way:
 
 The output will be found as first-m.pdf
 
-Licence
+=Licence
 == Multivalent Licence
 http://multivalent.sourceforge.net/license.html
 
